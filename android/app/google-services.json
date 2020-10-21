@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "103206566974",
+    "firebase_url": "https://appien-auth.firebaseio.com",
+    "project_id": "appien-auth",
+    "storage_bucket": "appien-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103206566974:android:a1c2cd4fbe04f92bab256f",
+        "android_client_info": {
+          "package_name": "com.auth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103206566974-1tn9k5buseabmecuglh9ivclibk9fohu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.auth",
+            "certificate_hash": "853587094cf909b8e216a92ca3719e7f3f903dee"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmxC5D0Dvvi6AgmNEnr7AvhIRmFAYTA10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103206566974-iirmtjgp2ntko3amam176kq5p1ir6alc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
