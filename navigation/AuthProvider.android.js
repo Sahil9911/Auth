@@ -22,19 +22,19 @@ export const AuthProvider = ({children}) => {
         },
         googleLogin: async () => {
           try {
-             // Get the users ID token
-             const { idToken } = await GoogleSignin.signIn();
+            // Get the users ID token
+            const { idToken } = await GoogleSignin.signIn();
 
             // Create a Google credential with the token
-             const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+            const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-              // Sign-in the user with the credential
-              await auth().signInWithCredential(googleCredential);
-          } catch (error) {
+            // Sign-in the user with the credential
+            await auth().signInWithCredential(googleCredential);
+          } catch(error) {
             console.log({error});
           }
         },
-        fblogin: async () => {
+        fbLogin: async () => {
           try {
             // Attempt login with permissions
             const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
@@ -47,17 +47,17 @@ export const AuthProvider = ({children}) => {
             const data = await AccessToken.getCurrentAccessToken();
 
             if (!data) {
-               throw 'Something went wrong obtaining access token';
-             }
+              throw 'Something went wrong obtaining access token';
+            }
 
             // Create a Firebase credential with the AccessToken
             const facebookCredential = auth.FacebookAuthProvider.credential(data.accessToken);
 
-             // Sign-in the user with the credential
+            // Sign-in the user with the credential
             await auth().signInWithCredential(facebookCredential);
-           } catch(error){
-              console.log(error);
-            }
+          } catch(error) {
+            console.log({error});
+          }
         },
         register: async (email, password) => {
           try {
